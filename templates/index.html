@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .center {
+      text-align: center;
+    }
+  </style>
+<head>
+    <title>{{name}}</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <!-- include Plotly.js -->
+</head>
+<body>
+<div class="center"><h1>{{name}}</h1></div>
+
+    <div id="plotlyDiv"></div> <!-- Place for the Plotly graph -->
+
+    <script type="text/javascript">
+        // Decode JSON string to get Plotly figure
+        var fig = JSON.parse({{ fig_json | tojson | safe }});
+
+        // Create Plotly graph
+        Plotly.react('plotlyDiv', fig.data, fig.layout);
+    </script>
+</body>
+</html>

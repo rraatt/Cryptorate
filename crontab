@@ -1,0 +1,1 @@
+* * * * * root python /app/fetch.py --symbol BTCUSDT --windowSize 1h >> /var/log/cron.log 2>&1
