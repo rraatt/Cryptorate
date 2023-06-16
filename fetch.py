@@ -1,14 +1,12 @@
-import csv
 import os
-
 import requests
 import pandas as pd
 import argparse
 
 # Parse command line arguments
 parser = argparse.ArgumentParser()
-parser.add_argument("--symbol", help="Symbols to fetch")
-parser.add_argument("--windowSize", choices=['1h', '4h', '1d'], help="Time window size")
+parser.add_argument("--symbol", help="Symbols to fetch", required=True)
+parser.add_argument("--windowSize", choices=['1h', '4h', '1d'], help="Time window size", required=True)
 args = parser.parse_args()
 
 symbol = args.symbol

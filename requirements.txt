@@ -27,3 +27,4 @@ tzdata==2023.3
 urllib3==2.0.3
 Werkzeug==2.3.6
 yarl==1.9.2
+celery[redis]==5.3.0
