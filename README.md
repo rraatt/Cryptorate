@@ -58,6 +58,7 @@ To start Flask UI
 Access at localhost:
 
  http://localhost:5000/candlestick/desired_symbol
+ 
  http://localhost:5000/piechart/
  
 
